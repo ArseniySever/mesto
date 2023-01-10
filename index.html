@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Места</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body class="page">
+    <div id="popup" class="popup">
+        <a href="#"><img class="popup__close" src="./images/Close Icon.png" alt="Закрыть окно"></a>
+        <div class="popup__container">
+          <h4 class="popup__title">Редактировать профиль</h4>
+            <form class="popup__form">
+                <fieldset class="popup__form-name">
+                    <input class="popup__name-item popup__name-item_name" value="Жак-Ив Кусто" type="text">
+                </fieldset>
+                <fieldset class="popup__form-name">
+                    <input class="popup__name-item popup__name-item_job" value="Исследователь океана" type="text">
+                </fieldset>
+                <fieldset class="popup__save-container">
+                    <input class="popup__save" value="Сохранить" type="submit">
+                </fieldset>
+            </form> 
+        </div>
+    </div>      
+   <header class="header"> 
+        <div class="header__logo"></div>
+        <hr class="header__line">
+   </header>
+   <section class="profile"> 
+        <img class="profile__avatar" src="./images/image.jpg" alt="Жав-Ив Кусто"></img>
+        <div class="profile__info"> 
+            <p class="profile__title">Жак-Ив Кусто</p>
+            <p class="profile__subtitle">Исследователь океана</p>
+            <div class="profile__edit-button">
+                <img src="./images/pencil.svg" alt="добавление кнопка">
+            </div>
+        </div>
+        <div class="profile__add-button">
+            <img src="./images/Addbutton.svg" alt="добавление кнопка">
+        </div>
+   </section>
+    <section class="elements">
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/tihvin.jpg" alt="Тихвин">
+                <h2 class="element__title">Тихвин</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/OldLadoga.jpg" alt="Старая Ладога">
+                <h2 class="element__title">Старая Ладога</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/gatchina.jpg" alt="Гатчина">
+                <h2 class="element__title">Гатчина</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/Viborg.jpg" alt="Выборг">
+                <h2 class="element__title">Выборг</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/petergoph.jpg" alt="Петергорф">
+                <h2 class="element__title">Петергорф</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="element__rectangle">
+                <img class="element__image" src="./images/oreshek.jpg" alt="Орешек">
+                <h2 class="element__title">Орешек</h2>
+                <button class="element__heart"></button>
+            </div>
+        </div>
+   </section>
+   <footer class="footer">
+        <p class="footer__copyright">© 2022 Mesto Russia</p>
+   </footer>
+   <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.element__heart_active{
+    background-image: url(../../../../images/Union.png);
+    width: 22px;
+    height: 19px;
+    grid-area: element__heart;
+    margin-right: 20px;
+    justify-self: flex-end;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    z-index: 1;
+}
