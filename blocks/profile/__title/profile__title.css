@@ -1,25 +1,28 @@
-.profile__title{
+.profile__title {
     margin: 0;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
     line-height: 114%;
-    color: #FFFFFF;
+    color: #ffffff;
     grid-area: profile__title;
     justify-self: flex-start;
+    align-self: flex-start;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    min-height: 50px;
+    max-width: 294px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-@media screen and (min-width:320px) and (max-width: 1023px){
-    .profile__title{
-    font-weight: 500;
-    font-size: 27px;
-    line-height: 33px;
-    text-align: center;
-    justify-self: center;
-
-}
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    .profile__title {
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        justify-self: flex-end;
+        max-width: 189px;
+    }
 }

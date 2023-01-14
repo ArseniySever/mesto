@@ -8,87 +8,82 @@
     <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
-    <div id="popup" class="popup">
-        <a href="#"><img class="popup__close" src="./images/CloseIcon.png" alt="Закрыть окно"></a>
-        <div class="popup__container">
-          <h4 class="popup__title">Редактировать профиль</h4>
-            <form class="popup__form">
-                <fieldset class="popup__form-name">
-                    <input class="popup__name-item popup__name-item_name" value="Жак-Ив Кусто" type="text">
-                </fieldset>
-                <fieldset class="popup__form-name">
-                    <input class="popup__name-item popup__name-item_job" value="Исследователь океана" type="text">
-                </fieldset>
-                <fieldset class="popup__save-container">
-                    <input class="popup__save" value="Сохранить" type="submit">
-                </fieldset>
-            </form> 
-        </div>
-    </div>      
    <header class="header"> 
-        <div class="header__logo"></div>
-        <hr class="header__line">
+        <img class="header__logo" src="./images/Vector.svg" alt="логотип">
    </header>
    <section class="profile"> 
         <img class="profile__avatar" src="./images/image.jpg" alt="Жав-Ив Кусто">
         <div class="profile__info"> 
-            <p class="profile__title">Жак-Ив Кусто</p>
-            <p class="profile__subtitle">Исследователь океана</p>
-            <div class="profile__edit-button">
-                <img src="./images/pencil.svg" alt="добавление кнопка">
-            </div>
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <h2 class="profile__subtitle">Исследователь океана</h2>
+            <button type="button" class="profile__edit-button">
+                <div class="profile__edit-button_image"></div>  
+            </button>
         </div>
-        <div class="profile__add-button">
-            <img src="./images/Addbutton.svg" alt="добавление кнопка">
-        </div>
+        <button type="button" class="profile__add-button">
+            <div class="profile__add-button_image"></div>
+        </button>
    </section>
     <section class="elements">
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/tihvin.jpg" alt="Тихвин">
                 <h2 class="element__title">Тихвин</h2>
-                <button class="element__heart"></button>
+                <button onclick="click_heart();" type="button" class="element__heart"></button>
             </div>
         </div>
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/OldLadoga.jpg" alt="Старая Ладога">
-                <h2 class="element__title">Старая Ладога</h2>
-                <button class="element__heart"></button>
+                <h2 class="element__title">Старая Ладога</h2> 
+                <button onclick="click_heart();" type="button" class="element__heart"></button>
+                
             </div>
         </div>
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/gatchina.jpg" alt="Гатчина">
                 <h2 class="element__title">Гатчина</h2>
-                <button class="element__heart"></button>
+                <button type="button" class="element__heart"></button>
             </div>
         </div>
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/Viborg.jpg" alt="Выборг">
                 <h2 class="element__title">Выборг</h2>
-                <button class="element__heart"></button>
+                <button type="button" class="element__heart"></button>
             </div>
         </div>
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/petergoph.jpg" alt="Петергорф">
                 <h2 class="element__title">Петергорф</h2>
-                <button class="element__heart"></button>
+                <button type="button" class="element__heart"></button>
             </div>
         </div>
         <div class="element">
             <div class="element__rectangle">
                 <img class="element__image" src="./images/oreshek.jpg" alt="Орешек">
                 <h2 class="element__title">Орешек</h2>
-                <button class="element__heart"></button>
+                <button type="button" class="element__heart"></button>
             </div>
         </div>
    </section>
    <footer class="footer">
         <p class="footer__copyright">© 2022 Mesto Russia</p>
    </footer>
-   <script src="./script.js"></script>
+   <div id="popup" class="popup">
+        <div class="popup__container">
+            <h4 class="popup__title">Редактировать профиль</h4>
+            <form class="popup__form" type="name">
+                <input class="popup__name-item popup_item_name" name="name" value="Жак-Ив Кусто" type="text">
+                <input class="popup__name-item popup_item_job" name="name" value="Исследователь океана" type="text">
+                <input class="popup__save" value="Сохранить" type="submit">
+            </form> 
+        </div>
+        <button type="button" class="popup__close" alt="Закрыть окно"></button>
+
+    </div>      
+   <script be src="./script/script.js"></script>
 </body>
 </html>

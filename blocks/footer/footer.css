@@ -1,4 +1,4 @@
-.footer{
+.footer {
     max-width: 68.75%;
     min-height: 18px;
     margin-left: auto;
@@ -6,8 +6,13 @@
     margin-top: 67px;
     margin-bottom: 60px;
 }
-@media screen and (min-width:320px) and (max-width: 767px){
-    .footer{
-    max-width: 85%;
-}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .footer {
+        max-width: 85%;
+        margin-top: 48px;
+        margin-bottom: 36px;
+        max-width: 282px;
+
+    
+    }
 }

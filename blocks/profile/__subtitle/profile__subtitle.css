@@ -1,27 +1,25 @@
-.profile__subtitle{
-    font-family: 'Inter';
+.profile__subtitle {
+    font-family: "Inter", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0;
+    max-width: 336px;
     grid-area: profile__subtitle;
     justify-self: flex-start;
-    text-overflow: ellipsis;
+    align-content: flex-end;
     white-space: nowrap;
     overflow: hidden;
-    min-height: 18px;
-
+    text-overflow: ellipsis;
 }
-@media screen and (min-width:320px) and (max-width: 1023px){
-    .profile__subtitle{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: center;
-    justify-self: center;
-
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+    .profile__subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        justify-self: flex-end;
+        max-width: 282px;
+    }
 }
-}
-
