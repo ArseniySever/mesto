@@ -5,8 +5,8 @@ let closeButton = page.querySelector('.popup__close');
 let formElement = page.querySelector('.popup__form');
 let login = page.querySelector('.profile__title');
 let job = page.querySelector('.profile__subtitle');
-let nameInput = formElement.querySelector('.popup_item_name');
-let jobInput = formElement.querySelector('.popup_item_job');
+let nameInput = formElement.querySelector('.popup__name-item_value_name');
+let jobInput = formElement.querySelector('.popup__name-item_value_name');
 let save = page.querySelector('.popup__save');
 let heart = document.querySelector('.element__heart');
 
