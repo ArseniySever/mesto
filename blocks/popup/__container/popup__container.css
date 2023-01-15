@@ -1,18 +1,16 @@
-.popup__container{
+.popup__container {
     max-width: 430px;
     width: 100%;
     min-height: 330px;
-    height: 100%;
     text-align: center;
     margin: auto;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    
 }
-@media screen and (min-width:320px) and (max-width: 767px){
-    .popup__container{
-    max-width: 282px;
-    max-height: 322px;
-}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .popup__container {
+        max-width: 282px;
+        min-height: 322px;
+    }
 }

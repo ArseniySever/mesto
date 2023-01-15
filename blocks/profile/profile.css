@@ -1,8 +1,8 @@
 .profile {
     display: grid;
-    grid-template-columns: 0.15fr 0.7fr 0.2fr;
+    grid-template-columns: 0.15fr 0.75fr 0.26fr;
     margin: 0;
-    max-width: 68.75%;
+    max-width: 880px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 36.25px;
@@ -21,6 +21,5 @@
         max-width: 282px;
         margin-bottom: 36px;
         margin-top: 42px;
-
     }
 }

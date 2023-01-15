@@ -1,4 +1,4 @@
-.element__rectangle{
+.element__rectangle {
     max-width: 282px;
     min-height: 361px;
     border-radius: 10px;
@@ -6,8 +6,8 @@
     display: grid;
     grid-template-rows: 78% 22%;
     grid-template-areas:
-    "element__image element__image"
-    "element__title element__heart";
+        "element__image element__image"
+        "element__title element__heart";
     grid-column: 1 / 2;
     grid-row: 1;
 }

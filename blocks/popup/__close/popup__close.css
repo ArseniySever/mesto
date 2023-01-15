@@ -9,39 +9,38 @@
     background-size: cover;
     border: none;
     position: absolute;
-    top: calc(0.2 * 100vh);
-    right: calc(0.325 * 100vw);
+    top: calc(0.22 * 100vh);
+    right: calc(0.3 * 100vw);
 }
 .popup__close:hover {
     opacity: 0.6;
     transition: 1s ease-in;
 }
 .popup__close::before,
-.popup__close::after{
+.popup__close::after {
     content: "";
     width: 32px;
     height: 32px;
     position: absolute;
-    top: 15%;
-    right: 35%;
+    top: 0;
+    right: 0;
 }
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     .popup__close {
-        top: calc(0.225 * 100vh);
+        top: calc(0.19 * 100vh);
         right: calc(0.25 * 100vw);
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .popup__close {
-        top: calc(100vh * 0.23);
         right: calc(100vw * 0.165);
-        }
+    }
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .popup__close {
-        top: calc(100vh * 0.25);
+        top: calc(0.15 * 100vh);
         right: calc(100vw * 0.05);
         min-width: 20px;
         min-height: 20px;
-        }
+    }
 }

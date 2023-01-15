@@ -6,6 +6,7 @@
     background: #000000;
     border-radius: 2px;
     max-width: 358px;
+    line-height: 18px;
     min-height: 50px;
     width: 100%;
     margin: 0;
@@ -15,7 +16,7 @@
     border: none;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 61px;
+    margin-top: 48px;
     outline-style: none;
     font-family: "Inter", Arial, sans-serif;
 }
