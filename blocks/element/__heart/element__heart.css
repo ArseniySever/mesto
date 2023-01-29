@@ -8,7 +8,6 @@
     cursor: pointer;
     border: none;
     background-image: url(../../../images/Heart.svg);
-    z-index: 1;
     background-color: transparent;
     padding: 0;
     outline-style: none;

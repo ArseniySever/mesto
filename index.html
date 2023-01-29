@@ -23,65 +23,47 @@
         <button type="button" class="profile__add-button"></button>
     </section>
     <section class="elements">
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/tihvin.jpg" alt="Тихвин">
-                <h2 class="element__title">Тихвин</h2>
-                <button onclick="click_heart();" type="button" class="element__heart"></button>
-            </div>
-        </div>
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/OldLadoga.jpg" alt="Старая Ладога">
-                <h2 class="element__title">Старая Ладога</h2>
-                <button onclick="click_heart();" type="button" class="element__heart"></button>
-
-            </div>
-        </div>
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/gatchina.jpg" alt="Гатчина">
-                <h2 class="element__title">Гатчина</h2>
-                <button type="button" class="element__heart"></button>
-            </div>
-        </div>
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/Viborg.jpg" alt="Выборг">
-                <h2 class="element__title">Выборг</h2>
-                <button type="button" class="element__heart"></button>
-            </div>
-        </div>
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/petergoph.jpg" alt="Петергорф">
-                <h2 class="element__title">Петергорф</h2>
-                <button type="button" class="element__heart"></button>
-            </div>
-        </div>
-        <div class="element">
-            <div class="element__rectangle">
-                <img class="element__image" src="./images/oreshek.jpg" alt="Орешек">
-                <h2 class="element__title">Орешек</h2>
-                <button type="button" class="element__heart"></button>
-            </div>
-        </div>
     </section>
     <footer class="footer">
         <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
-    <div id="popup" class="popup">
+    <div id="popup" class="popup popup-profile">
         <div class="popup__container">
             <h4 class="popup__title">Редактировать профиль</h4>
-            <form class="popup__form" name="name">
+            <form class="popup__form popup__form-profile" name="name">
                 <input class="popup__name-item popup__name-item_value_name" name="name" value=" " type="text">
                 <input class="popup__name-item popup__name-item_value_job" name="name" value=" " type="text">
                 <input class="popup__save" value="Сохранить" type="submit">
             </form>
             <button type="button" class="popup__close"></button>
         </div>
-
     </div>
+    <div id="popup" class="popup popup-place">
+        <div class="popup__container">
+            <h4 class="popup__title">Новое место</h4>
+            <form class="popup__form popup__form-place" name="name">
+                <input class="popup__name-item popup__name-item_value_title" placeholder="Название" name="name" type="text" >
+                <input class="popup__name-item popup__name-item_value_link" name="name" type="text" placeholder="Ссылка на картинку">
+                <input class="popup__save popup__save-place" value="Создать" type="submit">
+            </form>
+            <button type="button" class="popup__close"></button>
+        </div>
+    </div>
+    <div id="popup" class="popup popup-image">
+        <div class="popup__container popup__container-image">
+            <img class="popup__image" src="" alt="Фотокарточка места">
+            <h4 class="popup__subtitle"></h4>
+            <button type="button" class="popup__close popup__close-image"></button>
+        </div>    
+    </div>
+    <template id="element" class="element">
+        <div class="element__rectangle">
+            <button type="button" class="element__trash"></button>
+            <img class="element__image" src="" alt="Фотокарточка места">
+            <h2 class="element__title"></h2>
+            <button type="button" class="element__heart"></button>
+        </div>
+    </template> 
     <script src="./script/script.js"></script>
 </body>
 
