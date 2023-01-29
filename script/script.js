@@ -1,26 +1,26 @@
-let page = document.querySelector('.page');
-let popup = document.querySelectorAll('.popup');
-let popupProfile = page.querySelector('.popup-profile');
-let editButton = page.querySelector('.profile__edit-button');
-let popupPlace = page.querySelector('.popup-place');
-let popupImage = page.querySelector('.popup-image');
+var page = document.querySelector('.page');
+var popup = document.querySelectorAll('.popup');
+var popupProfile = page.querySelector('.popup-profile');
+var editButton = page.querySelector('.profile__edit-button');
+var popupPlace = page.querySelector('.popup-place');
+var popupImage = page.querySelector('.popup-image');
 
-let addButton = page.querySelector('.profile__add-button');
+var addButton = page.querySelector('.profile__add-button');
 
-let closeButton = document.querySelectorAll('.popup__close');
-let formElementProf = page.querySelector('.popup__form-profile');
-let formElementPla = page.querySelector('.popup__form-place');
+var closeButton = document.querySelectorAll('.popup__close');
+var formElementProf = page.querySelector('.popup__form-profile');
+var formElementPla = page.querySelector('.popup__form-place');
 
-let login = page.querySelector('.profile__title');
-let job = page.querySelector('.profile__subtitle');
-let nameInput = formElementProf.querySelector('.popup__name-item_value_name');
-let jobInput = formElementProf.querySelector('.popup__name-item_value_job');
+var login = page.querySelector('.profile__title');
+var job = page.querySelector('.profile__subtitle');
+var nameInput = formElementProf.querySelector('.popup__name-item_value_name');
+var jobInput = formElementProf.querySelector('.popup__name-item_value_job');
 let titleInput = formElementPla.querySelector('.popup__name-item_value_title');
-let imageInput = formElementPla.querySelector('.popup__name-item_value_link');
+var imageInput = formElementPla.querySelector('.popup__name-item_value_link');
 const placesBox = document.querySelector(".elements");
 const placeTemplate = document.querySelector("#element").content;
-let trash = document.querySelectorAll('.element__trash');
-let heart = document.querySelectorAll('.element__heart');
+var trash = document.querySelectorAll('.element__trash');
+var heart = document.querySelectorAll('.element__heart');
 
 const creatButton = document.querySelector(".creat__button");
 
