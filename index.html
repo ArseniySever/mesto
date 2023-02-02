@@ -17,7 +17,7 @@
         <img class="profile__avatar" src="./images/image.jpg" alt="Жав-Ив Кусто">
         <div class="profile__info">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
-            <h2 class="profile__subtitle">Исследователь океана</h2>
+            <p class="profile__subtitle">Исследователь океана</p>
             <button type="button" class="profile__edit-button"></button>
         </div>
         <button type="button" class="profile__add-button"></button>
@@ -29,11 +29,11 @@
     </footer>
     <div id="popup" class="popup popup-profile">
         <div class="popup__container">
-            <h4 class="popup__title">Редактировать профиль</h4>
+            <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form popup__form-profile" name="name">
                 <input class="popup__name-item popup__name-item_value_name" name="name" value=" " type="text">
-                <input class="popup__name-item popup__name-item_value_job" name="name" value=" " type="text">
-                <input class="popup__save" value="Сохранить" type="submit">
+                <input class="popup__name-item popup__name-item_value_job" name="about" value=" " type="text">
+                <button class="popup__save" value="Сохранить" type="submit">Сохранить</button>
             </form>
             <button type="button" class="popup__close"></button>
         </div>
@@ -43,15 +43,15 @@
             <h4 class="popup__title">Новое место</h4>
             <form class="popup__form popup__form-place" name="name">
                 <input class="popup__name-item popup__name-item_value_title" placeholder="Название" name="name" type="text" >
-                <input class="popup__name-item popup__name-item_value_link" name="name" type="text" placeholder="Ссылка на картинку">
-                <input class="popup__save popup__save-place" value="Создать" type="submit">
+                <input class="popup__name-item popup__name-item_value_link" name="link" type="text" placeholder="Ссылка на картинку">
+                <button class="popup__save popup__save-place" value="Создать" type="submit">Создать</button>
             </form>
             <button type="button" class="popup__close"></button>
         </div>
     </div>
     <div id="popup_image" class="popup popup-image">
         <div class="popup__container popup__container-image">
-            <img class="popup__image"  alt="Фотокарточка места">
+            <img class="popup__image">
             <h4 class="popup__subtitle"></h4>
             <button type="button" class="popup__close popup__close-image"></button>
         </div>    
@@ -59,11 +59,12 @@
     <template id="element" class="element">
         <div class="element__rectangle">
             <button type="button" class="element__trash"></button>
-            <img class="element__image"  alt="Фотокарточка места">
+            <img class="element__image">
             <h2 class="element__title"></h2>
             <button type="button" class="element__heart"></button>
         </div>
     </template> 
+    <script src="./script/card.js"></script>
     <script src="./script/script.js"></script>
 </body>
 

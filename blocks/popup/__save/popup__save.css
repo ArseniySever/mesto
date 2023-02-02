@@ -19,6 +19,7 @@
     margin-top: 48px;
     outline-style: none;
     font-family: "Inter", Arial, sans-serif;
+    align-items: center;
 }
 .popup__save:hover {
     opacity: 0.8;

@@ -16,3 +16,6 @@
     padding: 0;
     outline-style: none;
 }
+.element__trash:hover{
+    opacity: 0.6;
+}
