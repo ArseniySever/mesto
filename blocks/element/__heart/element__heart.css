@@ -14,5 +14,5 @@
 }
 .element__heart:hover {
     opacity: 0.5;
-    transition: 1s ease-in;
+    transition: 300ms ease-in;
 }
