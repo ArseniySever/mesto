@@ -21,6 +21,11 @@ const imageInput = formElementPlace.querySelector('.popup__name-item_value_link'
 const placesBox = document.querySelector(".elements");
 const placeTemplate = document.querySelector("#element").content;
 const creatButton = document.querySelector(".creat__button");
+const closePopupPlaceButton = popupPlace.querySelector('.popup__close');
+const closePopupProfileButton = popupProfile.querySelector('.popup__close');
+const closePopupImageButton = popupImage.querySelector('.popup__close');
+
+
 
 
 function addCard(name, link) {
@@ -54,8 +59,8 @@ function arrayInitialCards(initialCards) {
     })
 }
 
-function closePopup(evt) {
-    evt.target.closest(".popup").classList.remove('popup_opened');
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
 }
 
 function openPopup(popup) {
@@ -82,32 +87,43 @@ function openPopupProfile() {
 function openPopupEdit() {
     openPopup(popupPlace);    
 }
-function openPopupEdit() {
-    openPopup(popupPlace);    
-}
+
 
 function handleFormSubmitProfile(evt) {
     evt.preventDefault();
     login.textContent = nameInput.value;
     job.textContent = jobInput.value;
-    closePopup(evt);
+    closePopup(popupProfile);
 
 }
 
-
+function seekPopup(){
+    closePopupImageButton.addEventListener('click', () => {
+        closePopup(popupImage);
+    });
+    closePopupPlaceButton.addEventListener('click', () => {
+        closePopup(popupPlace);
+    });
+    closePopupProfileButton.addEventListener('click', () => {
+        closePopup(popupProfile);
+    });
+    
+}
 
 
 function creatPlace(evt) {
     evt.preventDefault();
     placesBox.prepend(addCard(titleInput.value, imageInput.value));
 
-    closePopup(evt);
-    event.target.reset(); 
+    closePopup(popupPlace);
+    evt.target.reset(); 
 }
 
 addButton.addEventListener('click', openPopupEdit);
 editButton.addEventListener('click', openPopupProfile);
-closeButtonList.forEach(button => button.addEventListener("click", closePopup));
+
+closeButtonList.forEach(button => button.addEventListener("click", seekPopup));
+
 formElementProfile.addEventListener('submit', handleFormSubmitProfile);
 formElementPlace.addEventListener('submit', creatPlace);
 
