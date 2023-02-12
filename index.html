@@ -27,24 +27,44 @@
     <footer class="footer">
         <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
+
+
     <div id="popup" class="popup popup-profile">
         <div class="popup__container">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form popup__form-profile" name="name">
-                <input class="popup__name-item popup__name-item_value_name" name="name" value=" " type="text">
-                <input class="popup__name-item popup__name-item_value_job" name="about" value=" " type="text">
-                <button class="popup__save" value="Сохранить" type="submit">Сохранить</button>
+            <form class="popup__form popup__form-profile" name="name" novalidate>
+                <fieldset class="popup__set">  
+                    <div class="popup__form-item">
+                        <input id="name-input" class="popup__name-item popup__name-item_value_name" name="name" value=" " type="text"  minlength="2" maxlength="40" required >
+                        <span class="popup__item-error name-input-error"></span>
+                    </div>
+                    <div class="popup__form-item">
+                        <input id="job-input" class="popup__name-item popup__name-item_value_job" name="about" value=" " type="text"  minlength="2" maxlength="200" required>
+                        <span class="popup__item-error job-input-error"></span>
+                    </div>
+                    <button class="popup__save" value="Сохранить" type="submit">Сохранить</button>
+                </fieldset>
             </form>
             <button type="button" class="popup__close"></button>
         </div>
     </div>
+
+
     <div id="popup_place" class="popup popup-place">
         <div class="popup__container">
             <h2 class="popup__title">Новое место</h2>
-            <form class="popup__form popup__form-place" name="name">
-                <input class="popup__name-item popup__name-item_value_title" placeholder="Название" name="name" type="text" >
-                <input class="popup__name-item popup__name-item_value_link" name="link" type="text" placeholder="Ссылка на картинку">
-                <button class="popup__save popup__save-place" value="Создать" type="submit">Создать</button>
+            <form class="popup__form popup__form-place" name="name" novalidate>
+                <fieldset class="popup__set">  
+                    <div class="popup__form-item">
+                        <input id="title-input" class="popup__name-item popup__name-item_value_title" placeholder="Название" name="name" type="text" required minlength="2" maxlength="30">
+                        <span class="popup__item-error title-input-error"></span>
+                    </div>
+                    <div class="popup__form-item">
+                        <input id="link-input" class="popup__name-item popup__name-item_value_link" name="link" type="url" placeholder="Ссылка на картинку">
+                        <span class="popup__item-error link-input-error"></span>
+                    </div>
+                    <button class="popup__save popup__save-place" value="Создать" type="submit">Создать</button>
+                </fieldset>
             </form>
             <button type="button" class="popup__close"></button>
         </div>
@@ -66,6 +86,7 @@
     </template> 
     <script src="./script/card.js"></script>
     <script src="./script/script.js"></script>
+    <script src="./script/validate.js"></script>
 </body>
 
 </html>

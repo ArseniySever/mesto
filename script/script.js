@@ -11,7 +11,8 @@ const addButton = page.querySelector('.profile__add-button');
 const closeButtonList = document.querySelectorAll('.popup__close');
 const formElementProfile = page.querySelector('.popup__form-profile');
 const formElementPlace = page.querySelector('.popup__form-place');
-
+const popupForm = document.querySelector(".popup__form");
+const popupInput = popupForm.querySelector(".popup__name-item");
 const login = page.querySelector('.profile__title');
 const job = page.querySelector('.profile__subtitle');
 const nameInput = formElementProfile.querySelector('.popup__name-item_value_name');
@@ -24,7 +25,7 @@ const creatButton = document.querySelector(".creat__button");
 const closePopupPlaceButton = popupPlace.querySelector('.popup__close');
 const closePopupProfileButton = popupProfile.querySelector('.popup__close');
 const closePopupImageButton = popupImage.querySelector('.popup__close');
-
+const buttonCloseList = document.querySelectorAll('.popup__close'); 
 
 
 
@@ -97,32 +98,46 @@ function handleFormSubmitProfile(evt) {
 
 }
 
-function seekPopup(){
-    closePopupImageButton.addEventListener('click', () => {
-        closePopup(popupImage);
-    });
-    closePopupPlaceButton.addEventListener('click', () => {
-        closePopup(popupPlace);
-    });
-    closePopupProfileButton.addEventListener('click', () => {
-        closePopup(popupProfile);
-    });
-    
-}
+buttonCloseList.forEach(btn => {
+    const popup = btn.closest('.popup');
+    btn.addEventListener('click', () => closePopup(popup)); 
+  })
 
 
 function creatPlace(evt) {
     evt.preventDefault();
+    
     placesBox.prepend(addCard(titleInput.value, imageInput.value));
 
     closePopup(popupPlace);
     evt.target.reset(); 
 }
 
+
+popupList.forEach(pop => {
+    const popup = pop.closest('.popup');
+    page.addEventListener('keydown',  function(e) {
+        if( e.keyCode == 27 ){ 
+            closePopup(popup);
+        }
+    });
+})
+popupList.forEach(pop => {
+    const popup = pop.closest('.popup');
+    page.addEventListener('click',  function(e) {
+        if( e.target === popup ){ 
+            closePopup(popup);
+        }
+    });
+})
+
+
+
+
+
 addButton.addEventListener('click', openPopupEdit);
 editButton.addEventListener('click', openPopupProfile);
 
-closeButtonList.forEach(button => button.addEventListener("click", seekPopup));
 
 formElementProfile.addEventListener('submit', handleFormSubmitProfile);
 formElementPlace.addEventListener('submit', creatPlace);
