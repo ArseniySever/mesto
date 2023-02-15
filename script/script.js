@@ -43,7 +43,7 @@ function addCard(name, link) {
     newElement
         .querySelector('.element__trash')
         .addEventListener('click', deleteOnClick);
-    newElement.addEventListener('click', function () {
+    elementImage.addEventListener('click', function () {
         image.src = link;
         subtitle.textContent = name;
         image.alt = name;
@@ -108,9 +108,7 @@ closeButtonList.forEach(btn => {
 
 function creatPlace(evt) {
     evt.preventDefault();
-
     placesBox.prepend(addCard(titleInput.value, imageInput.value));
-
     closePopup(popupPlace);
     evt.target.reset();
 }
@@ -130,14 +128,13 @@ function closeByEscape(evt) {
 
 
 
-popupList.forEach(pop => {
-    const popup = pop.closest('.popup');
-    page.addEventListener('click', function (e) {
-        if (e.target === popup) {
-            closePopup(popup);
-        }
+popupList.forEach((popup) => {
+    popup.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        closePopup(popup);
+      }
     });
-})
+  });
 
 
 
