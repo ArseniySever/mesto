@@ -1,3 +1,5 @@
+
+export {initialCards, Card};
 const initialCards = [
     {
         name: 'Тихвин',
@@ -24,3 +26,75 @@ const initialCards = [
         link: 'https://takeyourtrip.ru/images/posts/8789/HQ/IMG_5287.jpg'
     }
 ];
+const popupElement = document.querySelector('.popup-image');
+const image = popupElement.querySelector(".popup__image");
+const subtitle = popupElement.querySelector(".popup__subtitle");
+const closePopupImageButton = popupElement.querySelector('.popup__close');
+
+class Card {
+    constructor(data, templateSelector) {
+        this._templateSelector = templateSelector;
+        this._name = data.name;
+        this._link = data.link;
+        this._templateSelector = templateSelector;
+    }
+    
+    _getTemplate(){
+        const cardElement = document
+        .querySelector(this._templateSelector)
+        .content
+        .querySelector('.element__rectangle')
+        .cloneNode(true);
+        
+        return cardElement;
+    }
+    generateCard() {
+        this._element = this._getTemplate();
+        this._setEventListeners();
+        this._element.querySelector('.element__title').textContent = this._name;
+        this._element.querySelector('.element__image').src = this._link;
+
+        return this._element;
+    }
+    
+    _setEventListeners() {
+
+        this._element.querySelector('.element__heart').addEventListener('click', () => {
+          this._like();
+      });
+      this._element.querySelector('.element__image').addEventListener('click', () => {
+            this._handleOpenPopup()
+      });
+      closePopupImageButton.addEventListener('click', () => {
+        this._handleClosePopup()
+       });
+       this._element.querySelector('.element__trash').addEventListener('click', () => {
+        this._delete();
+    });
+    
+    }
+    _like() {
+        this._element.querySelector('.element__heart').classList.toggle("element__heart_active");
+    }
+    _delete(){
+        this._element.closest(".element__rectangle").remove();
+    }
+    _addDataToPopup() {
+        image.src = this._link;
+        image.alt = this._name;
+        subtitle.textContent = this._name;
+    }
+    _handleOpenPopup() {
+        this._addDataToPopup();
+        popupElement.classList.add('popup_opened');
+    } 
+    _handleClosePopup() {
+        popupElement.classList.remove('popup_opened');
+    }
+}
+initialCards.forEach((item) => {
+    const card = new Card(item, ".element-template");
+    const cardElement = card.generateCard();
+  
+    document.querySelector('.elements').append(cardElement);
+});
