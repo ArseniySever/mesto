@@ -29,6 +29,7 @@ const initialCards = [
 const popupElement = document.querySelector('.popup-image');
 const image = popupElement.querySelector(".popup__image");
 const subtitle = popupElement.querySelector(".popup__subtitle");
+const imageElement = document.querySelector('.element__image');
 
 
 class Card {
@@ -47,10 +48,11 @@ class Card {
     }
     generateCard() {
         this._element = this._getTemplate();
+        this._image = this._element.querySelector('.element__image');
         this._setEventListeners();
         this._element.querySelector('.element__title').textContent = this._name;
-        this._element.querySelector('.element__image').alt = this._name;
-        this._element.querySelector('.element__image').src = this._link;
+        this._image.alt = this._name;
+        this._image.src = this._link;
         return this._element;
     }
     
@@ -58,7 +60,7 @@ class Card {
         this._element.querySelector('.element__heart').addEventListener('click', () => {
           this._like();
       });
-      this._element.querySelector('.element__image').addEventListener('click', () => {
+      this._image.addEventListener('click', () => {
             this._handleOpenPopup()
       });
        this._element.querySelector('.element__trash').addEventListener('click', () => {

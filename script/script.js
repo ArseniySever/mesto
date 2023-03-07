@@ -43,11 +43,9 @@ function openPopupProfile() {
 
 }
 
-function openPopupEdit() {
-    titleInput.value = "";
-    imageInput.value = "";
-
+function openPopupEdit(evt) {
     openPopup(popupPlace);
+    formAddNewCard.reset();
 }
 
 function handleFormSubmitProfile(evt) {
@@ -106,9 +104,8 @@ const formAddNewCardValidator = new FormValidator(config, formAddNewCard);
 formAddNewCardValidator.enableValidation();
 
 initialCards.forEach((item) => {
-    const card = new Card(item, ".element-template");
-    const cardElement = card.generateCard();
-    placesBox.append(cardElement);
+    addCard(item, ".element-template");
+
 });
 
 
