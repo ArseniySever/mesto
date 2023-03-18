@@ -1,5 +1,4 @@
-
-export {initialCards, Card};
+export { initialCards, Card };
 const initialCards = [
     {
         name: 'Тихвин',
@@ -31,19 +30,19 @@ const image = popupElement.querySelector(".popup__image");
 const subtitle = popupElement.querySelector(".popup__subtitle");
 const imageElement = document.querySelector('.element__image');
 
-
 class Card {
     constructor(data, templateSelector) {
+        this._data = data;
         this._templateSelector = templateSelector;
         this._name = data.name;
         this._link = data.link;
     }
-    _getTemplate(){
+    _getTemplate() {
         const cardElement = document
-        .querySelector(this._templateSelector)
-        .content
-        .querySelector('.element__rectangle')
-        .cloneNode(true);
+            .querySelector(this._templateSelector)
+            .content
+            .querySelector('.element__rectangle')
+            .cloneNode(true);
         return cardElement;
     }
     generateCard() {
@@ -55,23 +54,21 @@ class Card {
         this._image.src = this._link;
         return this._element;
     }
-    
     _setEventListeners() {
         this._element.querySelector('.element__heart').addEventListener('click', () => {
-          this._like();
-      });
-      this._image.addEventListener('click', () => {
+            this._like();
+        });
+        this._image.addEventListener('click', () => {
             this._handleOpenPopup()
-      });
-       this._element.querySelector('.element__trash').addEventListener('click', () => {
-        this._delete();
-    });
-    
+        });
+        this._element.querySelector('.element__trash').addEventListener('click', () => {
+            this._delete();
+        });
     }
     _like() {
         this._element.querySelector('.element__heart').classList.toggle("element__heart_active");
     }
-    _delete(){
+    _delete() {
         this._element.closest(".element__rectangle").remove();
     }
     _addDataToPopup() {
@@ -82,7 +79,7 @@ class Card {
     _handleOpenPopup() {
         this._addDataToPopup();
         popupElement.classList.add('popup_opened');
-    } 
+    }
     _handleClosePopup() {
         popupElement.classList.remove('popup_opened');
     }
