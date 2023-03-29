@@ -39,5 +39,5 @@
 .popup__name-item_active{color:red;font-family:Inter,Arial,sans-serif;font-size:12px;font-style:normal;font-weight:400;line-height:15px;text-align:left}
 .popup__form-item{margin-left:auto;margin-right:auto;max-width:358px}.popup__form-item:first-child{min-height:60px}
 .profile__avatar-area{align-content:center;display:flex;justify-content:center;margin:0;padding:0}
-.profile__avatar-edit{background:none;border:none;border-radius:50%;height:120px;margin:0;padding:0;position:absolute;width:120px}.profile__avatar-edit:hover{background:rgba(0,0,0,.9) url(8667ac4a523e8fc42e59.svg) no-repeat 50%;cursor:pointer;opacity:.8}
+.profile__avatar-edit{background:none;border:none;border-radius:50%;height:120px;margin:0;padding:0;position:absolute;width:120px}.profile__avatar-edit:hover{background:rgba(0,0,0,.9) url(93c771f5f8582261951d.png) no-repeat 50%;cursor:pointer;opacity:.8}
 
