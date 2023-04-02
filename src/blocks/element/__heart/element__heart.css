@@ -10,7 +10,6 @@
     background-color: transparent;
     padding: 0;
     outline-style: none;
-    grid-area: element__heart-number;
 }
 .element__heart:hover {
     opacity: 0.5;
