@@ -15,7 +15,7 @@
 .element__image{border-radius:10px 10px 0 0;cursor:pointer;grid-area:element__image;height:100%;max-height:282px;max-width:282px;-o-object-fit:cover;object-fit:cover;width:100%}
 .element{display:grid}@media screen and (min-width:320px) and (max-width:767px){.element{justify-self:center}}
 .element__title{align-self:center;color:#000;font-family:Inter,Arial,sans-serif;font-size:24px;font-style:normal;font-weight:900;grid-area:element__title;line-height:29px;margin:0 0 0 21px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.element__heart{align-self:center;background-color:transparent;background-image:url(87ed371465c7a6a1cd01.svg);border:none;cursor:pointer;grid-area:element__heart;height:19px;justify-self:flex-end;margin-right:20px;outline-style:none;padding:0;width:22px}.element__heart:hover{opacity:.5;transition:.3s ease-in}
+.element__heart{align-self:center;background-color:transparent;background-image:url(87ed371465c7a6a1cd01.svg);border:none;cursor:pointer;grid-area:element__heart;grid-area:element__heart-number;height:19px;justify-self:flex-end;margin-right:20px;outline-style:none;padding:0;width:22px}.element__heart:hover{opacity:.5;transition:.3s ease-in}
 .element__heart_active{background-image:url(fe17a515669479b1e649.svg)}
 .footer{margin:67px auto 60px;max-width:68.75%}@media screen and (min-width:320px) and (max-width:767px){.footer{margin-bottom:36px;margin-top:48px;max-width:282px}}
 .footer__copyright{color:#545454;font-family:Inter,Arial,sans-serif;font-size:18px;font-style:normal;font-weight:400;line-height:22px}@media screen and (min-width:320px) and (max-width:767px){.footer__copyright{font-size:14px}}
