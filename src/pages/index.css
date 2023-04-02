@@ -45,3 +45,8 @@
 @import url(../blocks/popup/__save/popup__save_inactive.css);
 @import url(../blocks/popup/__name-item/popup__name-item_active.css);
 @import url(../blocks/popup/__form-item/popup__form-item.css);
+@import url(../blocks/profile/__avatar/profile__avatar-area.css);
+@import url(../blocks/profile/__avatar/profile__avatar-edit.css);
+@import url(../blocks/element/__heart/element__heart-number.css);
+@import url(../blocks/popup/__container/popup__container-delete.css);
+@import url(../blocks/element/__area/element__area.css);

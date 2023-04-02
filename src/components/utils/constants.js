@@ -11,11 +11,17 @@ export {
   placesBox,
   login,
   job,
+  avatar,
   titleInput,
   imageInput,
   formEditProfile,
   formAddNewCard,
+  formAddAvatar,
   nameInput,
+  popupAvatar,
+  avatarEdit,
+  buttonEditeAvatar,
+  avatarInput,
   jobInput,
 };
 const validationConfig = {
@@ -56,11 +62,15 @@ const page = document.querySelector(".page");
 const popupProfile = page.querySelector(".popup-profile");
 const buttonEdit = page.querySelector(".profile__edit-button");
 const popupPlace = page.querySelector(".popup-place");
+const popupAvatar = page.querySelector(".popup-avatar");
+const avatarEdit = page.querySelector(".profile__avatar");
 const buttonAdd = page.querySelector(".profile__add-button");
 const formElementPlace = page.querySelector(".popup__form-place");
 const placesBox = document.querySelector(".elements");
 const login = page.querySelector(".profile__title");
 const job = page.querySelector(".profile__subtitle");
+const avatar = page.querySelector(".profile__avatar");
+const buttonEditeAvatar = page.querySelector(".profile__avatar-edit");
 const titleInput = formElementPlace.querySelector(
   ".popup__name-item_value_title"
 );
@@ -69,7 +79,12 @@ const imageInput = formElementPlace.querySelector(
 );
 const formEditProfile = popupProfile.querySelector(".popup__form");
 const formAddNewCard = popupPlace.querySelector(".popup__form");
+const formAddAvatar = popupAvatar.querySelector(".popup__form");
 const nameInput = formEditProfile.querySelector(".popup__name-item_value_name");
 const jobInput = formEditProfile.querySelector(".popup__name-item_value_job");
+const avatarInput = formAddAvatar.querySelector(
+  ".popup__name-item_value_avatar"
+);
+
 const popupPhoto = page.querySelector(".popup__image");
 const popupSubtitle = page.querySelector(".popup__subtitle");
