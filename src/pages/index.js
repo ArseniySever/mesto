@@ -97,12 +97,12 @@ popupProfileElement.setEventListeners();
 
 const popupAvatarElement = new PopupWithForm({
   selectorPopup: ".popup-avatar",
-  handleFormSubmit: (data) => {
+  handleFormSubmit: (dataForm) => {
     popupAvatarElement.loading(true);
     api
-      .editAvatar(data)
-        .then((data) => {
-          avatar.src = data.avatar;
+      .editAvatar(dataForm)
+        .then((dataForm) => {
+          userInfoNew.setUserInfo(dataForm);
           popupAvatarElement.close();
         })
         .catch((err) => {
